@@ -14,7 +14,7 @@ st.markdown("Exploración interactiva de los datos biométricos de los 22 usuari
 # Carga de datos optimizada con caché
 @st.cache_data
 def load_data():
-    df = pd.read_csv('Actigraph.csv')
+    df = pd.read_csv('actigraph_1_9.csv')
     if 'Unnamed: 0' in df.columns:
         df = df.drop(columns=['Unnamed: 0'])
     return df
