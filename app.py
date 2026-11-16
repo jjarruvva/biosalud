@@ -12,7 +12,7 @@ st.markdown("Selecciona múltiples usuarios en la barra lateral para comparar su
 # Carga de datos optimizada con caché
 @st.cache_data
 def load_data():
-    df = pd.read_csv('actigraph_total.csv')
+    df = pd.read_csv('actigraph_1_7.csv')
     if 'Unnamed: 0' in df.columns:
         df = df.drop(columns=['Unnamed: 0'])
     return df
